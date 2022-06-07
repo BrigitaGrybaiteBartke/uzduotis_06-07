@@ -1,0 +1,29 @@
+body {
+    background-color: white
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#periodicTable {
+    
+}
+
+table tr td {
+    background-color: rgb(170, 59, 12);
+    border: 1px solid rgb(192, 215, 236);
+    color: white;
+    padding: 10px;
+}
+
+.empty {
+    background-color: white;
+    border: none;
+}
+
+.space td {
+    background-color: white;
+    border: none;
+}
