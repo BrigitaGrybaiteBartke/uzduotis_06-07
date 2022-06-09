@@ -60,3 +60,12 @@ div {
     display: inline-block;
     float: left;
 }
+
+.active {
+    background-color: rgb(44, 180, 107);
+}
+
+.weekend {
+   
+    border: 1.5px solid rgb(216, 218, 219);;
+}
