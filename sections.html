@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sections</title>
+    
 <style>
+
     * {
         box-sizing: border-box;
     }
@@ -13,21 +15,73 @@
     body {
         height: 5000px;
         margin: 0;
-        background-color: rgb(206, 215, 220);;
     }
-    .main {
 
+    nav {
+      background-color: antiquewhite;
+      height: auto;
+      min-height: 100px;
+      padding: 10px;
+  }
+
+  .LinkToSection {
+      text-align: center;
+  }
+
+  .LinkToSection ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 20px;
+  }
+
+  .LinkToSection ul li a {
+      text-decoration: none;
+      border-top: 3px solid rgb(206, 215, 220);
+      border-bottom: 3px solid rgb(206, 215, 220);
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;  
+      padding: 10px 20px;  
+      margin: 10px;
     }
+
+    .LinkToSection ul li a:link, 
+    .LinkToSection ul li a:visited,
+    .LinkToSection ul li a:active {
+        background-color: rgba(255, 255, 255, 0.395);
+        color: black;
+  } 
+
+  .LinkToSection ul li a:hover {
+        background-color: rgb(249, 248, 248);
+  }
+
+    .main {
+        width: 100%;
+    }
+
     section {
-        border: 3px solid antiquewhite;
+        border: 3px solid rgb(206, 215, 220);
         text-align: justify;
-        height: 500px;
-        margin: 30px;
+        margin: 10px;
+        padding: 10px;
+        min-height: 200px;
+    }
+/*  - nustatomas minimalus aukštis, kuris gali būti;
+    - jei teksto yra daugiau, aukštis automatiškai paskirstomas pagal
+        section esamą tekstą;
+    - problema: paveikslėlis "išeina" iš section, todėl reikia naudoti
+        clearfix::after ; */  
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
     section h2, h3 {
         text-align: center;
     }
+
   .img1 {
       float: right;
       margin-left: 20px;
@@ -37,54 +91,7 @@
       float: left;
       margin-right: 20px;
   }
-
-  .img3 {
-
-  }
-
-  nav {
-      background-color: antiquewhite;
-      height: 100px;
-  }
-
-  .LinkToSection {
-      display: inline-block;
-      text-align: center;
-      width: 100%;
-  }
-
-  .LinkToSection ul li {
-      list-style: none;
-      display: inline-block;
-      margin-top: 20px;
-  }
-
-  .LinkToSection ul li a {
-      text-decoration: none;
-      border-top: 3px solid rgb(206, 215, 220);
-      border-bottom: 3px solid rgb(206, 215, 220);
-      border-top-left-radius: 20px;
-      border-bottom-right-radius: 20px;    
-      padding: 10px 20px;
-      margin: 0 8px;
-  }
-
-
-  .LinkToSection ul li a:link, 
-  .LinkToSection ul li a:visited,
-  .LinkToSection ul li a:active {
-      background-color: rgba(255, 255, 255, 0.395);
-      color: black;
-
-  } 
-
-  .LinkToSection ul li a:hover {
-      background-color: red;
-  }
-
-
-
-
+ 
 </style>
 
 </head>
@@ -102,66 +109,62 @@
             <li><a href="#sec8">Section 8</a></li>
         </ul>
     </div>
-
-   
 </nav>
 
 <div class="main">
 
-    <section id="sec1" class="sec1">
-        <div>
+    <section id="sec1" class="clearfix">
             <h2>Section 1</h2>
             <h3>Lorem ipsum dolor sit amet</h3>
             <img class="img1" src="images/img1.jpg" style="width: 200px; height: 280px;">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
-        </div> 
+            <p>Lorem ipsum dolor sit amet consectetur, </p>
     </section>
-
-    <section id="sec2" class="sec2">
+    
+    <section id="sec2" class="clearfix">
         <h2>Section 2</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img2" src="images/img2.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec3" class="sec3">
+    <section id="sec3" class="clearfix">
         <h2>Section 3</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img1" src="images/img3.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec4" class="sec4">
+    <section id="sec4" class="clearfix">
         <h2>Section 4</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img2" src="images/img4.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec5" class="sec5">
+    <section id="sec5" class="clearfix">
         <h2>Section 5</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img1" src="images/img5.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec6" class="sec6">
+    <section id="sec6" class="clearfix">
         <h2>Section 6</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img2" src="images/img6.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec7" class="sec7">
+    <section id="sec7" class="clearfix">
         <h2>Section 7</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img1" src="images/img7.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
 
-    <section id="sec8" class="sec8">
+    <section id="sec8" class="clearfix">
         <h2>Section 8</h2>
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h3>Lorem ipsum dolor sit amet</h3>
         <img class="img2" src="images/img8.jpg" style="width: 200px; height: 280px;">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, in ratione? A nihil ea iste quasi ipsam? Aspernatur ea architecto maxime cupiditate optio quos voluptatibus eius totam laborum reiciendis explicabo quaerat, exercitationem, accusantium quidem saepe eligendi assumenda velit quae mollitia nisi, molestiae excepturi! Ex itaque, consequuntur provident illo, doloremque suscipit possimus praesentium cumque laudantium autem reprehenderit expedita. Obcaecati cupiditate nesciunt odio beatae non consequatur, nisi autem! Dolore voluptatem amet id ratione aut fugit, accusamus fuga quisquam cumque voluptates alias eveniet a hic ipsam! Labore quod vel magnam veniam porro quia officiis modi aut velit doloremque totam earum laudantium, quos culpa facere veritatis sequi nesciunt. Harum soluta omnis dicta autem itaque atque similique, accusamus ex, architecto ea corrupti ullam inventore dolorum a sunt accusantium rerum ipsa vel incidunt ratione asperiores molestias nulla fugit laudantium. Odit minus fuga vitae optio eaque pariatur error ipsum libero iste. Consequatur, magni optio atque placeat eum illum commodi repellat iusto iste sed distinctio necessitatibus quaerat animi iure unde expedita. Quaerat, totam doloremque. Odio ut perspiciatis iure aperiam officiis dicta, qui id ipsam at aliquam tempora omnis deserunt facere quidem numquam veritatis dolorum quibusdam similique error mollitia assumenda magnam nulla minus cumque. Vitae quis veritatis iusto rem!</p>
     </section>
